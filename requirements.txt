@@ -1,0 +1,6 @@
+ollama
+ddgs
+trafilatura
+requests
+google-genai
+pillow

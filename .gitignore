@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+outputs/
+*.pyc
+.env
+.pytest_cache/
+node_modules/
+.opencode/node_modules/
+.opencode/bun.lock
+.opencode/package-lock.json
