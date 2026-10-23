@@ -56,7 +56,7 @@ if os.path.exists(video):
     except Exception as e:
         check("video is readable by ffprobe", False, str(e))
 check("video agent tasks traced",
-      {"plan_scenes", "scene_image", "evaluate_frame", "assemble"} <= tasks(os.path.join(OUT, "video_agent_trace.json")))
+      {"plan_scenes", "art", "compose_frame", "narrate", "render_clip", "assemble"} <= tasks(os.path.join(OUT, "video_agent_trace.json")))
 
 print(f"\n{len(fails)} failed")
 sys.exit(1 if fails else 0)

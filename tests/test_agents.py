@@ -3,7 +3,7 @@ import agents as A
 
 
 def make(name, mentions=1, score=None):
-    c = {"name": name, "mentions": mentions, "sources": ["http://s/" + name]}
+    c = {"name": name, "mentions": mentions, "sources": ["http://s/" + name], "latest_news": "ok", "total_funding": "100", "valuation": "200"}
     if score is not None:
         c["score"] = score
     return c

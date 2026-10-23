@@ -1,56 +1,50 @@
-import os, sys
+import json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-import json
-import pytest
-from fakes import FakeClient, text_resp, img_resp, empty_resp
+from PIL import Image
+from fakes import FakeImageGen, fake_llm
 import logo_agent as L
 
 
-def test_parse_json_variants():
-    assert L.parse_json('noise {"score": 8} tail') == {"score": 8}
-    assert L.parse_json("no json") is None
-    assert L.parse_json(None) is None
+def agent(tmp_path, scores=None, llm=None):
+    return L.LogoAgent(llm=llm or fake_llm("a glowing hexagon of nodes"),
+                       imagegen=FakeImageGen(scores), team="Test Team", outdir=str(tmp_path))
 
 
-def test_happy_path_accepts_first_good_logo(tmp_path):
-    c = FakeClient([text_resp("brand"), text_resp("logo prompt"), img_resp(),
-                    text_resp('{"score": 8, "feedback": "good"}')])
-    out = L.LogoAgent(client=c, team="T", outdir=str(tmp_path)).run()
-    assert out and os.path.exists(out) and out.endswith("team_logo.png")
-    assert len(c.models.calls) == 4
+def test_happy_path_makes_1024_logo(tmp_path):
+    a = agent(tmp_path, [8])
+    out = a.run()
+    assert out.endswith("team_logo.png") and Image.open(out).size == (1024, 1024)
+    assert [e["score"] for e in a.log] == [8]
 
 
-def test_retries_until_threshold(tmp_path):
-    c = FakeClient([text_resp("b"), text_resp("p"),
-                    img_resp(b"one"), text_resp('{"score": 3, "feedback": "too busy"}'),
-                    img_resp(b"two"), text_resp('{"score": 9, "feedback": "great"}')])
-    agent = L.LogoAgent(client=c, team="T", outdir=str(tmp_path))
-    out = agent.run()
-    assert open(out, "rb").read() == b"two"
-    assert [a["score"] for a in agent.log] == [3.0, 9.0]
+def test_emblem_prompt_forbids_text(tmp_path):
+    a = agent(tmp_path, [9])
+    a.run()
+    prompt = a.imagegen.calls[0][0]
+    assert "no text" in prompt and "hexagon" in prompt
 
 
-def test_keeps_best_when_none_reach_threshold(tmp_path):
-    rs = [text_resp("b"), text_resp("p")]
-    for data, sc in ((b"a", 2), (b"b", 6), (b"c", 4)):
-        rs += [img_resp(data), text_resp(json.dumps({"score": sc, "feedback": "f"}))]
-    out = L.LogoAgent(client=FakeClient(rs), team="T", outdir=str(tmp_path)).run()
-    assert open(out, "rb").read() == b"b"
+def test_retries_with_new_seed_and_refined_prompt(tmp_path):
+    a = agent(tmp_path, [3, 9])
+    a.run()
+    (p1, s1), (p2, s2) = a.imagegen.calls
+    assert s1 != s2 and p1 != p2 and [e["score"] for e in a.log] == [3, 9]
 
 
-def test_returns_none_if_no_image_ever_returned(tmp_path):
-    rs = [text_resp("b"), text_resp("p"), empty_resp(), empty_resp(), empty_resp()]
-    assert L.LogoAgent(client=FakeClient(rs), team="T", outdir=str(tmp_path)).run() is None
+def test_keeps_best_attempt_when_none_pass(tmp_path):
+    a = agent(tmp_path, [2, 6, 4])
+    a.run()
+    assert len(a.imagegen.calls) == 3 and a.last["best"][1].endswith("v2.png")
 
 
-def test_garbage_evaluation_scores_zero(tmp_path):
-    rs = [text_resp("b"), text_resp("p"), img_resp(), text_resp("lol no json")]
-    agent = L.LogoAgent(client=FakeClient(rs), team="T", outdir=str(tmp_path))
-    agent.run(max_attempts=1)
-    assert agent.log[0]["score"] == 0.0
+def test_logo_still_made_when_llm_is_down(tmp_path):
+    def down(prompt, **kw):
+        raise ConnectionError("ollama down")
+    a = agent(tmp_path, [9], llm=down)
+    assert a.run() is not None
+    assert a.fallbacks == ["brand_analysis", "design_concepts"]
 
 
-def test_writes_log_file(tmp_path):
-    rs = [text_resp("b"), text_resp("p"), img_resp(), text_resp('{"score": 9}')]
-    L.LogoAgent(client=FakeClient(rs), team="T", outdir=str(tmp_path)).run()
+def test_log_file_written(tmp_path):
+    agent(tmp_path, [9]).run()
     assert "attempts" in json.load(open(tmp_path / "logo_agent_log.json"))

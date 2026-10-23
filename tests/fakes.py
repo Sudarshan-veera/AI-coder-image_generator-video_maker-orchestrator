@@ -1,42 +1,44 @@
-from types import SimpleNamespace
+import wave
+from PIL import Image
 
 
-def text_resp(t):
-    return SimpleNamespace(text=t, candidates=[])
-
-
-def img_resp(data=b"\x89PNG"):
-    part = SimpleNamespace(inline_data=SimpleNamespace(data=data))
-    return SimpleNamespace(text=None, candidates=[SimpleNamespace(content=SimpleNamespace(parts=[part]))])
-
-
-def empty_resp():
-    return SimpleNamespace(text="", candidates=[])
-
-
-class FakeVideo:
-    def save(self, path):
-        with open(path, "wb") as f:
-            f.write(b"MP4")
-
-
-class FakeModels:
-    def __init__(self, responses):
-        self.responses = list(responses)
+class FakeImageGen:
+    def __init__(self, scores=None):
+        self.scores = list(scores or [])
         self.calls = []
 
-    def generate_content(self, model, contents):
-        self.calls.append(model)
-        return self.responses.pop(0)
+    def generate(self, prompt, path, width=512, height=512, seed=None):
+        self.calls.append((prompt, seed))
+        Image.new("RGB", (width, height), (40, 90, 160)).save(path)
+        return True
 
-    def generate_videos(self, model, prompt, image, config):
-        self.calls.append(model)
-        return SimpleNamespace(done=True, response=SimpleNamespace(
-            generated_videos=[SimpleNamespace(video=FakeVideo())]))
+    def score(self, path, prompt):
+        return self.scores.pop(0) if self.scores else 9.0
+
+    def unload(self):
+        pass
 
 
-class FakeClient:
-    def __init__(self, responses):
-        self.models = FakeModels(responses)
-        self.files = SimpleNamespace(download=lambda file: None)
-        self.operations = SimpleNamespace(get=lambda op: op)
+class FakeTTS:
+    def speak(self, text, path):
+        with wave.open(path, "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(8000)
+            w.writeframes(b"\x00\x00" * 8000)          # 1 second of silence
+        return 1.0
+
+
+class FakeAnimator:
+    def __init__(self, fail=False):
+        self.calls, self.fail = 0, fail
+
+    def animate(self, image, prompt, out, seconds=3):
+        self.calls += 1
+        if self.fail:
+            raise RuntimeError("out of memory")
+        open(out, "wb").write(b"MP4")
+
+
+def fake_llm(reply="ok"):
+    return lambda prompt, **kw: reply
