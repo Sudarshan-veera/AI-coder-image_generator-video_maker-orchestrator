@@ -1,0 +1,74 @@
+[
+  {
+    "agent": "startup_agent",
+    "task": "plan",
+    "status": "ok",
+    "seconds": 5.96,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "startup_agent",
+    "task": "research",
+    "status": "ok",
+    "seconds": 45.02,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "startup_agent",
+    "task": "extract",
+    "status": "ok",
+    "seconds": 17.26,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "startup_agent",
+    "task": "filter",
+    "status": "ok",
+    "seconds": 0.0,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "startup_agent",
+    "task": "rank",
+    "status": "ok",
+    "seconds": 6.0,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "startup_agent",
+    "task": "enrich",
+    "status": "ok",
+    "seconds": 8.62,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "startup_agent",
+    "task": "critic",
+    "status": "ok",
+    "seconds": 0.0,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "startup_agent",
+    "task": "report",
+    "status": "ok",
+    "seconds": 0.0,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  }
+]
