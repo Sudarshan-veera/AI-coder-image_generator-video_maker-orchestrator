@@ -1,1 +1,1 @@
-Run 1 - first end-to-end run of all three local agents: coding agent (Top 10 FinTech startups + trace), image agent (team logo + trace), video agent (how_it_works.mp4, scene plan, trace). These are the required deliverables.
+Run 1 - first end-to-end run of all three local agents: coding agent (Top 10 FinTech startups + trace), image agent (team logo + trace), video agent (how_it_works.mp4, scene plan, trace).
