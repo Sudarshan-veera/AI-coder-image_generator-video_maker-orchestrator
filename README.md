@@ -1,6 +1,6 @@
 # Startup Scout
 
-[![tests](https://github.com/Sudarshan-veera/startup-scout/actions/workflows/tests.yml/badge.svg)](https://github.com/Sudarshan-veera/startup-scout/actions)
+[![tests](https://github.com/Sudarshan-veera/AI-coder-image_generator-video_maker-orchestrator/actions/workflows/tests.yml/badge.svg)](https://github.com/Sudarshan-veera/AI-coder-image_generator-video_maker-orchestrator/actions)
 
 A system of **three independent agents**. Each agent is an *orchestrator of independent tasks*
 built on one small shared engine (`common/orchestrator.py`).
@@ -79,7 +79,8 @@ make verify    # checks the real outputs of the three agents
 
 ## Team
 - Sudarshan-veera ([GitHub](https://github.com/Sudarshan-veera))
-- Add the other two team members here
+- NAME 2 (GitHub: handle)
+- NAME 3 (GitHub: handle)
 
 ## License
 MIT
