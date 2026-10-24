@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Ramp",
+    "what_it_does": "Corporate finance solutions including expense management and corporate card solutions with an automation-first approach.",
+    "total_funding": "$1.85B + $750M",
+    "valuation": "$32 billion",
+    "status": "private",
+    "latest_news": "Raised $1.85B in primary financing on Oct 15, 2026; previously raised $750M in Series F on Jun 4, 2026.",
+    "mentions": 3,
+    "sources": [
+      "https://valueaddvc.com/rankings/fintech",
+      "https://www.analyticsinsight.net/fintech/top-10-fintech-unicorn-companies-in-2026",
+      "https://startupik.com/fintech-startups-backed-by-top-vcs-in-2026/"
+    ],
+    "valuation_usd": 32000000000.0,
+    "funding_usd": 1850000000.0,
+    "llm_score": 9.8,
+    "reason": "Most recent major funding round ($1.85B) on Oct 15, 2026 indicates extremely high growth momentum and market confidence.",
+    "score": 84.0
+  },
+  {
+    "name": "Kalshi",
+    "what_it_does": "unknown",
+    "total_funding": "$1.12B + $1B",
+    "valuation": "$40B",
+    "status": "private",
+    "latest_news": "Raised $1.12B (Undisclosed stage) on Aug 25, 2026; raised $1B in Series F on May 7, 2026.",
+    "mentions": 1,
+    "sources": [
+      "https://valueaddvc.com/rankings/fintech"
+    ],
+    "valuation_usd": 40000000000.0,
+    "funding_usd": 1120000000.0,
+    "llm_score": 8.8,
+    "reason": "Raised $1.12B recently (Aug 2026) despite unknown product details; large capital influx signals high growth.",
+    "score": 75.4
+  },
+  {
+    "name": "Polymarket",
+    "what_it_does": "unknown",
+    "total_funding": "$1B",
+    "valuation": "$21 billion",
+    "status": "private",
+    "latest_news": "Raised $1B (Undisclosed stage) on Aug 31, 2026.",
+    "mentions": 1,
+    "sources": [
+      "https://valueaddvc.com/rankings/fintech"
+    ],
+    "valuation_usd": 21000000000.0,
+    "funding_usd": 1000000000.0,
+    "llm_score": 8.5,
+    "reason": "Raised $1B in Aug 2026 indicates strong recent traction in the prediction market space.",
+    "score": 73.7
+  },
+  {
+    "name": "Stripe",
+    "what_it_does": "Global payments infrastructure with developer-friendly APIs allowing businesses to process online payments, manage subscriptions, and scale globally.",
+    "total_funding": "unknown",
+    "valuation": "$159 billion",
+    "status": "private",
+    "latest_news": "Valuation of $159 billion as of February 2026.",
+    "mentions": 3,
+    "sources": [
+      "https://www.analyticsinsight.net/fintech/top-10-fintech-unicorn-companies-in-2026",
+      "https://fintechnews.ch/funding/top-10-private-fintech-companies-by-valuation-as-of-august-2026/85114/",
+      "https://startupik.com/fintech-startups-backed-by-top-vcs-in-2026/"
+    ],
+    "valuation_usd": 159000000000.0,
+    "funding_usd": 0.0,
+    "llm_score": 9.5,
+    "reason": "Massive valuation ($159B) and consistent presence suggest sustained dominance, though news is slightly older (Feb 2026).",
+    "score": 70.1
+  },
+  {
+    "name": "Airwallex",
+    "what_it_does": "Cross-border payment and financial infrastructure company helping businesses manage international transactions.",
+    "total_funding": "$1.9 billion",
+    "valuation": "$8 billion",
+    "status": "private",
+    "latest_news": "Valuation of $8 billion as of December 2025.",
+    "mentions": 1,
+    "sources": [
+      "https://www.analyticsinsight.net/fintech/top-10-fintech-unicorn-companies-in-2026"
+    ],
+    "valuation_usd": 8000000000.0,
+    "funding_usd": 1900000000.0,
+    "llm_score": 5.5,
+    "reason": "Valuation data from Dec 2025 is older than the majority of top candidates.",
+    "score": 65.2
+  },
+  {
+    "name": "Revolut",
+    "what_it_does": "Multinational bank and fintech company offering digital banking services including multi-currency accounts, debit cards, P2P transfers, savings vaults, stock and crypto trading, and travel insurance.",
+    "total_funding": "unknown",
+    "valuation": "US$115 billion",
+    "status": "private",
+    "latest_news": "Valued at US$115 billion in August 2026 (up from US$75 billion in late-2025).",
+    "mentions": 1,
+    "sources": [
+      "https://fintechnews.ch/funding/top-10-private-fintech-companies-by-valuation-as-of-august-2026/85114/"
+    ],
+    "valuation_usd": 115000000000.0,
+    "funding_usd": 0.0,
+    "llm_score": 9.2,
+    "reason": "Significant valuation increase to $115B in Aug 2026 shows strong recent momentum.",
+    "score": 62.9
+  },
+  {
+    "name": "Chime",
+    "what_it_does": "Fee-free digital banking platform supporting financial inclusion for underserved consumers.",
+    "total_funding": "unknown",
+    "valuation": "$11.6 billion",
+    "status": "private",
+    "latest_news": "Valuation of $11.6 billion as of June 2025.",
+    "mentions": 1,
+    "sources": [
+      "https://www.analyticsinsight.net/fintech/top-10-fintech-unicorn-companies-in-2026"
+    ],
+    "valuation_usd": 11600000000.0,
+    "funding_usd": 0.0,
+    "llm_score": 6.0,
+    "reason": "Valuation data is from June 2025 (older), suggesting slower recent momentum compared to peers with 2026 news.",
+    "score": 51.5
+  },
+  {
+    "name": "Plaid",
+    "what_it_does": "Securely collects bank account information for applications and promotes seamless data sharing via APIs.",
+    "total_funding": "unknown",
+    "valuation": "$8 billion",
+    "status": "private",
+    "latest_news": "Valuation of $8 billion as of February 2026.",
+    "mentions": 1,
+    "sources": [
+      "https://www.analyticsinsight.net/fintech/top-10-fintech-unicorn-companies-in-2026"
+    ],
+    "valuation_usd": 8000000000.0,
+    "funding_usd": 0.0,
+    "llm_score": 5.8,
+    "reason": "Valuation data from Feb 2026; lack of specific recent funding rounds in the provided text lowers recency score.",
+    "score": 50.5
+  },
+  {
+    "name": "Razorpay",
+    "what_it_does": "Indian provider of e-commerce payment gateways and related value-added financial services for merchants.",
+    "total_funding": "unknown",
+    "valuation": "$9.2 billion",
+    "status": "private",
+    "latest_news": "Valuation of $9.2 billion as of January 2026.",
+    "mentions": 1,
+    "sources": [
+      "https://www.analyticsinsight.net/fintech/top-10-fintech-unicorn-companies-in-2026"
+    ],
+    "valuation_usd": 9200000000.0,
+    "funding_usd": 0.0,
+    "llm_score": 5.2,
+    "reason": "Valuation data from Jan 2026; no specific recent funding news listed in the snippet.",
+    "score": 49.2
+  },
+  {
+    "name": "Pine Labs",
+    "what_it_does": "Develops point-of-sale and online payment methods for retailers in the Asia-Pacific region, integrating new-age payment methods.",
+    "total_funding": "unknown",
+    "valuation": "$2.9 billion",
+    "status": "private",
+    "latest_news": "Valuation of $2.9 billion as of November 2025.",
+    "mentions": 1,
+    "sources": [
+      "https://www.analyticsinsight.net/fintech/top-10-fintech-unicorn-companies-in-2026"
+    ],
+    "valuation_usd": 2900000000.0,
+    "funding_usd": 0.0,
+    "llm_score": 4.8,
+    "reason": "Valuation data from Nov 2025 is the oldest among the top tier.",
+    "score": 46.5
+  }
+]

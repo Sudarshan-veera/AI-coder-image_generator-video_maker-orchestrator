@@ -1,0 +1,42 @@
+[
+  {
+    "agent": "planner",
+    "action": "queries",
+    "detail": "['Top 10 private venture-backed FinTech startups by valuation in 2026', 'FinTech unicorns with largest funding rounds raised in 2026', 'Fastest growing private FinTech companies 2026 revenue and user metrics', 'Latest news on leading private FinTech startups raising Series C or D in 2026', 'List of "
+  },
+  {
+    "agent": "researcher",
+    "action": "collected_results",
+    "detail": "35"
+  },
+  {
+    "agent": "extractor",
+    "action": "unique_candidates",
+    "detail": "21"
+  },
+  {
+    "agent": "filter",
+    "action": "dropped_public_or_acquired",
+    "detail": "[]"
+  },
+  {
+    "agent": "ranker",
+    "action": "ranked",
+    "detail": "['Ramp', 'Stripe', 'Revolut', 'Chime', 'Plaid', 'Airwallex', 'Razorpay', 'Pine Labs', 'Kalshi', 'Polymarket']"
+  },
+  {
+    "agent": "enricher",
+    "action": "enriched",
+    "detail": "['Ramp', 'Kalshi', 'Polymarket', 'Stripe', 'Airwallex', 'Revolut', 'Chime', 'Plaid', 'Razorpay', 'Pine Labs']"
+  },
+  {
+    "agent": "critic",
+    "action": "verdict",
+    "detail": "OK"
+  },
+  {
+    "agent": "reporter",
+    "action": "wrote",
+    "detail": "outputs/fintech_top10.md"
+  }
+]

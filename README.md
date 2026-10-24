@@ -8,8 +8,8 @@ built on one small shared engine (`common/orchestrator.py`).
 | Agent | Purpose | Model | Where it runs |
 |---|---|---|---|
 | Coding agent (`harness/`, OpenCode agent `scout`) | Top 10 best-performing startups for any category | Qwen3.5 9B via Ollama (open source) | **Local only, no cloud LLM** |
-| Image agent (`image_agent/`) | Team logo | Gemini text + image models (API) | API |
-| Video agent (`video_agent/`) | Video explaining the agents and their orchestration | Gemini + Veo (API), ffmpeg | API |
+| Image agent (`image_agent/`) | Team logo | Local: Ollama LLM + SDXL-Turbo + CLIP | Local (GPU) |
+| Video agent (`video_agent/`) | Video explaining the agents and their orchestration | Local: SDXL-Turbo art, espeak-ng voice, ffmpeg | Local (GPU) |
 
 ```mermaid
 flowchart TB
@@ -45,12 +45,19 @@ make startups CATEGORY="FinTech"
 ```bash
 make startups CATEGORY="HealthTech"      # coding agent (script)
 opencode                                  # coding agent (chat): pick `scout`, type a category
-export GEMINI_API_KEY=...  TEAM_NAME="Your Team"
+export TEAM_NAME="Your Team"
 make logo                                 # image agent  -> outputs/team_logo.png
 make video                                # video agent  -> outputs/how_it_works.mp4
 ```
 Every agent writes a task trace (`outputs/trace.json`, `image_agent_trace.json`,
 `video_agent_trace.json`) with task status, retries and timings.
+
+## Results
+
+Required deliverables (run 1): [team logo](runs/run1_first_pipeline/team_logo.png),
+[agent workflow video](runs/run1_first_pipeline/how_it_works.mp4),
+[Top 10 FinTech startups](runs/run1_first_pipeline/fintech_top10.md).
+All five runs, in order, are in [runs/](runs/README.md).
 
 ## Test and verify
 ```bash
@@ -67,14 +74,13 @@ make verify    # checks the real outputs of the three agents
 | AGENT_MODEL | agent-coder | Ollama model for the coding agent |
 | AGENT_CTX | 16384 | context window used by the harness |
 | MAX_ROUNDS | 3 | research rounds before the critic gives up |
-| GEMINI_API_KEY | none | image/video agents only |
 | TEAM_NAME | Startup Scout | text in the logo |
-| TEXT_MODEL / IMAGE_MODEL / VIDEO_MODEL | gemini-2.5-flash / gemini-2.5-flash-image / veo-3.0-fast-generate-001 | model names |
+| LOCAL_IMAGE_MODEL / LOCAL_VIDEO_MODEL / TTS_VOICE | stabilityai/sdxl-turbo / Lightricks/LTX-Video / en-us | local image, video and voice models |
 
 ## Limitations
 - Figures come from web snippets read by a 9B local model and may be wrong; every row lists sources.
 - DuckDuckGo search can be rate limited.
-- Veo needs a billing-enabled key; the video agent has a `--slideshow` fallback.
+- Image and video generation need a CUDA GPU (SDXL-Turbo; LTX-Video motion is optional and slower).
 - No cloud LLM is used by the coding agent (enforced by `tests/test_local_only.py`).
 
 ## Team
