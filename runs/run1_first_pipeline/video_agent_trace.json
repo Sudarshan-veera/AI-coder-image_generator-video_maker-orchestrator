@@ -1,0 +1,344 @@
+[
+  {
+    "agent": "video_agent",
+    "task": "plan_scenes",
+    "status": "ok",
+    "seconds": 0.0,
+    "round": null,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "narration_polish",
+    "status": "ok",
+    "seconds": 17.33,
+    "round": null,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "art",
+    "status": "ok",
+    "seconds": 617.11,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "evaluate_frame",
+    "status": "ok",
+    "seconds": 0.0,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "regenerate_if_weak",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "compose_frame",
+    "status": "ok",
+    "seconds": 0.18,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "narrate",
+    "status": "ok",
+    "seconds": 0.1,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "render_clip",
+    "status": "ok",
+    "seconds": 1.17,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "animate_clip",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 1,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "art",
+    "status": "ok",
+    "seconds": 0.28,
+    "round": 2,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "evaluate_frame",
+    "status": "ok",
+    "seconds": 0.0,
+    "round": 2,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "regenerate_if_weak",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 2,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "compose_frame",
+    "status": "ok",
+    "seconds": 0.21,
+    "round": 2,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "narrate",
+    "status": "ok",
+    "seconds": 0.01,
+    "round": 2,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "render_clip",
+    "status": "ok",
+    "seconds": 1.37,
+    "round": 2,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "animate_clip",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 2,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "art",
+    "status": "ok",
+    "seconds": 0.27,
+    "round": 3,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "evaluate_frame",
+    "status": "ok",
+    "seconds": 0.0,
+    "round": 3,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "regenerate_if_weak",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 3,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "compose_frame",
+    "status": "ok",
+    "seconds": 0.21,
+    "round": 3,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "narrate",
+    "status": "ok",
+    "seconds": 0.01,
+    "round": 3,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "render_clip",
+    "status": "ok",
+    "seconds": 0.99,
+    "round": 3,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "animate_clip",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 3,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "art",
+    "status": "ok",
+    "seconds": 0.26,
+    "round": 4,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "evaluate_frame",
+    "status": "ok",
+    "seconds": 0.0,
+    "round": 4,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "regenerate_if_weak",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 4,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "compose_frame",
+    "status": "ok",
+    "seconds": 0.16,
+    "round": 4,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "narrate",
+    "status": "ok",
+    "seconds": 0.01,
+    "round": 4,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "render_clip",
+    "status": "ok",
+    "seconds": 1.1,
+    "round": 4,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "animate_clip",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 4,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "art",
+    "status": "ok",
+    "seconds": 0.26,
+    "round": 5,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "evaluate_frame",
+    "status": "ok",
+    "seconds": 0.0,
+    "round": 5,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "regenerate_if_weak",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 5,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "compose_frame",
+    "status": "ok",
+    "seconds": 0.17,
+    "round": 5,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "narrate",
+    "status": "ok",
+    "seconds": 0.01,
+    "round": 5,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "render_clip",
+    "status": "ok",
+    "seconds": 0.99,
+    "round": 5,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "animate_clip",
+    "status": "skipped",
+    "seconds": 0,
+    "round": 5,
+    "attempt": 1,
+    "error": ""
+  },
+  {
+    "agent": "video_agent",
+    "task": "assemble",
+    "status": "ok",
+    "seconds": 0.13,
+    "round": 5,
+    "attempt": 1,
+    "error": ""
+  }
+]

@@ -20,14 +20,14 @@ Rounds repeat plan..critic until the critic is satisfied or `MAX_ROUNDS` is reac
 Front end: OpenCode agent `scout` calls the `top_startups` tool, which runs this orchestrator.
 No cloud LLM API is used.
 
-## 2. Image agent (`image_agent/logo_agent.py`)
+## 2. Image agent (`image_agent/logo_agent.py`, fully local)
 brand_analysis -> design_concepts -> loop[ generate -> evaluate -> refine ] -> finalize.
-Stops when the score is >= 7 or after 3 attempts; the best attempt is kept as `team_logo.png`.
-Supports a reference image (`--ref`). `generate` and the setup tasks retry once.
+SDXL-Turbo draws the emblem, CLIP scores it, the loop stops when the score passes or attempts run
+out, and the best attempt is kept as `team_logo.png` with the team name added by Pillow.
 
-## 3. Video agent (`video_agent/video_agent.py`)
-plan_scenes, then for each scene: scene_image -> evaluate_frame -> regenerate_if_weak ->
-collect_frame -> scene_video (Veo), then assemble with ffmpeg. `--slideshow` skips Veo.
+## 3. Video agent (`video_agent/video_agent.py`, fully local)
+plan_scenes, then for each scene: art (SDXL-Turbo) -> evaluate_frame -> compose overlay ->
+narrate (espeak-ng) -> render clip, then assemble with ffmpeg. Optional LTX-Video adds motion.
 
 ## Independence
 The agents share only `common/`. `tests/test_agent_independence.py` fails if one agent imports

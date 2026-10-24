@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Three independent agents",
+    "tasks": [
+      "Coding agent",
+      "Image agent",
+      "Video agent"
+    ],
+    "art": "abstract glowing network of connected nodes, dark blue background, digital art",
+    "caption": "Each agent is an orchestrator of independent tasks on one small shared engine.",
+    "narration": "Our system features three independent agents. Each acts as an orchestrator running its own tasks, where every single task is carefully traced and tested to ensure reliability."
+  },
+  {
+    "title": "Coding agent: local LLM",
+    "tasks": [
+      "plan",
+      "research",
+      "extract",
+      "filter",
+      "rank",
+      "enrich",
+      "critic",
+      "report"
+    ],
+    "art": "futuristic data center with flowing streams of light and documents, blue and teal",
+    "caption": "Runs on a local open source model with Ollama. The critic can send it back for another round.",
+    "narration": "The coding agent runs on a local open source model. It plans searches, researches the web, extracts facts, filters out public companies, ranks the rest and enriches missing data. A critic can send it back for another round before the final top ten report.",
+    "note": "Last coding-agent run: 1 round(s), 8 tasks, 106 s"
+  },
+  {
+    "title": "Image agent: team logo",
+    "tasks": [
+      "brand",
+      "concept",
+      "generate",
+      "evaluate",
+      "refine",
+      "finalize"
+    ],
+    "art": "artist studio with glowing holographic design sketches, purple and blue, digital art",
+    "caption": "A local diffusion model draws the emblem, CLIP scores it, and the name is added with crisp text.",
+    "narration": "Our image agent writes a brand brief, creates a prompt, draws an emblem with a local diffusion model, scores it, and refines it until it passes. Then it adds the team name."
+  },
+  {
+    "title": "Video agent: this video",
+    "tasks": [
+      "plan",
+      "art",
+      "evaluate",
+      "compose",
+      "narrate",
+      "render",
+      "assemble"
+    ],
+    "art": "film editing studio with glowing timeline screens, dark teal, cinematic digital art",
+    "caption": "Local diffusion art, a local voice, and ffmpeg turn the plan into this video.",
+    "narration": "Our video agent plans scenes, draws background art, checks quality, composes the diagram, records narration with a local voice, and assembles the clips with ffmpeg to create your final video."
+  },
+  {
+    "title": "Everything runs locally",
+    "tasks": [
+      "Ollama LLM",
+      "SDXL-Turbo",
+      "CLIP",
+      "espeak-ng",
+      "ffmpeg"
+    ],
+    "art": "single glowing laptop at night surrounded by floating light particles, digital art",
+    "caption": "No cloud API is used by any agent.",
+    "narration": "Everything runs smoothly on just one laptop. You get a local language model, a local image model, and local tools, all working together with absolutely no cloud services needed at all."
+  }
+]

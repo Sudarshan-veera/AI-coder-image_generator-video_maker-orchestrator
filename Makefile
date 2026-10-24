@@ -1,4 +1,5 @@
 .RECIPEPREFIX := >
+.PHONY: test startups free-gpu logo video all verify e2e examples zip
 CATEGORY ?= FinTech
 
 test:

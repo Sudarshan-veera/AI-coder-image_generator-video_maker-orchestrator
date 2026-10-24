@@ -1,7 +1,7 @@
 # Testing
 
 ## Automated (offline)
-`make test` runs pytest with every Ollama, search and Gemini call mocked.
+`make test` runs pytest with every Ollama, search, diffusers and ffmpeg call mocked.
 | File | Covers |
 |---|---|
 | test_core_orchestrator.py | engine: context flow, retries, optional, when, loop, trace |
