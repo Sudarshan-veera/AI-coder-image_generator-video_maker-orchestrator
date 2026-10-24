@@ -85,8 +85,8 @@ make verify    # checks the real outputs of the three agents
 
 ## Team
 - Sudarshan-veera ([GitHub](https://github.com/Sudarshan-veera))
-- NAME 2 (GitHub: handle)
-- NAME 3 (GitHub: handle)
+- SUDARSHAN
+- KISHORE
 
 ## License
 MIT
