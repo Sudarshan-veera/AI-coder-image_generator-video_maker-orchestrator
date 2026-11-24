@@ -84,9 +84,9 @@ make verify    # checks the real outputs of the three agents
 - No cloud LLM is used by the coding agent (enforced by `tests/test_local_only.py`).
 
 ## Team
-- Sudarshan-veera ([GitHub](https://github.com/Sudarshan-veera))
-- SUDARSHAN
-- KISHORE
+- SUDARSHAN V
+- KISHORE V
+- SHYAM SUNDAR S
 
 ## License
 MIT
